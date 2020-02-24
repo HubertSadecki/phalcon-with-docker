@@ -35,7 +35,7 @@ RUN ln -s /usr/local/bin/php /usr/bin/php
 
 ARG APP_ENV
 
-RUN composer global require phalcon/devtools > /dev/null
+RUN composer global require phalcon/devtools --quiet
 ENV PATH="/tmp/vendor/bin:${PATH}"
 
 CMD ["php-fpm", "-R"]
