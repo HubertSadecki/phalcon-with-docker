@@ -17,6 +17,7 @@ services:
       context: docker/php
       args:
         APP_ENV: "${APP_ENV}"
+        PHALCON_VERSION: "${PHALCON_VERSION}"
     working_dir: /var/www/Phalcon
     volumes:
       - ./Backend:/var/www/Phalcon
@@ -34,6 +35,7 @@ services:
       context: docker/php
       args:
         APP_ENV: "${APP_ENV}"
+        PHALCON_VERSION: "${PHALCON_VERSION}"
     working_dir: /var/www/Phalcon
     volumes:
       - ./Backend:/var/www/Phalcon
