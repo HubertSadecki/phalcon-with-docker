@@ -21,7 +21,8 @@ services:
     volumes:
       - ./Backend:/var/www/Phalcon
       - composer-cache-volume:/tmp/cache
-    entrypoint: composer install
+      - ./docker/composer/entrypoint.sh:/usr/local/src/entrypoint.sh
+    entrypoint: /usr/local/src/entrypoint.sh
 
   redis:
     build: docker/redis
